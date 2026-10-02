@@ -36,8 +36,10 @@
       <article class="dashboard__panel">
         <h2>Resumen</h2>
         <p>
-          BookList permite registrar, consultar, editar, filtrar y eliminar
-          libros mediante una interfaz SPA con Vue Router y componentes reutilizables.
+          BookList es una aplicación para organizar y gestionar un catálogo de libros de forma sencilla. 
+          Permite registrar nuevos libros, consultar la colección, editar y eliminar registros, 
+          buscar libros por autor, filtrar por categoría y marcar libros como favoritos. 
+          Su interfaz está diseñada para facilitar la navegación y ofrecer una experiencia clara y práctica para el usuario.
         </p>
       </article>
     </div>
