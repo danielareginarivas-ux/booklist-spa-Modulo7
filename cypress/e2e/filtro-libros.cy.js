@@ -7,18 +7,24 @@ describe('Filtro de libros', () => {
     cy.get('#usuario').type('admin')
     cy.get('#password').type('123456')
     cy.contains('button', 'Entrar al sistema').click()
-    // Acessar a lista de livros
-cy.contains('a', 'Libros').click()
 
-// Filtrar pelo autor
-cy.get('input[placeholder="Buscar por autor..."]').type('Asimov')
+    // Acceder al catálogo de libros
+    cy.contains('a', 'Libros').click()
 
-// Verificar o resultado
-cy.contains('Fundación').should('be.visible')
-cy.contains('Isaac Asimov').should('be.visible')
+    // Esperar que los libros sean cargados desde la API
+    cy.contains('Fundación').should('be.visible')
 
-// Verificar que outro livro não aparece no resultado
-cy.contains('Cien años de soledad').should('not.exist')
+    // Filtrar por autor
+    cy.get('input[placeholder="Buscar por autor..."]')
+      .should('be.visible')
+      .type('Asimov')
+
+    // Verificar el libro filtrado
+    cy.contains('Fundación').should('be.visible')
+    cy.contains('Isaac Asimov').should('be.visible')
+
+    // Verificar que un libro de otro autor ya no aparezca
+    cy.contains('Dom Casmurro').should('not.exist')
 
   })
 })
