@@ -10,12 +10,16 @@
     />
 
     <div class="filtros">
-      <input
-        v-model.trim="busqueda"
-        type="search"
-        placeholder="Buscar por autor..."
-        class="filtros__input"
-      />
+     <v-text-field
+  v-model.trim="busqueda"
+  type="search"
+  placeholder="Buscar por autor..."
+  label="Buscar libro"
+  variant="outlined"
+  density="compact"
+  hide-details
+  class="filtros__input"
+/>
       <select v-model="categoriaSeleccionada" class="filtros__select">
         <option value="">Todas las categorías</option>
         <option v-for="cat in categoriasDisponibles" :key="cat" :value="cat">{{ cat }}</option>
