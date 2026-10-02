@@ -1,4 +1,4 @@
-# BookList SPA — Proyecto Módulo 6
+# BookList SPA — Proyecto Módulo 7
 
 SPA de gestión de libros
 
